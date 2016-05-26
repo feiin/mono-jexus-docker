@@ -12,7 +12,9 @@ RUN curl -O http://www.linuxdot.net/down/jexus-$JEXUS_VERSION.tar.gz && \
     tar -zxvf jexus-$JEXUS_VERSION.tar.gz && \
     cd jexus-$JEXUS_VERSION && \
     ./install 
-    
+
+COPY config /usr/jexus/siteconf
+
 RUN yum -y install openssh-server
 
 RUN ssh-keygen -t rsa -f /etc/ssh/ssh_host_rsa_key -C '' -N '' && \
