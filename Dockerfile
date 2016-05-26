@@ -19,10 +19,8 @@ RUN ssh-keygen -t rsa -f /etc/ssh/ssh_host_rsa_key -C '' -N '' && \
     ssh-keygen -t ecdsa -f /etc/ssh/ssh_host_ecdsa_key -C '' -N ''  && \
     ssh-keygen -t ed25519 -f /etc/ssh/ssh_host_ed25519_key -C '' -N ''
 
-RUN mkdir /www && touch /start.sh && chmod 777 /start.sh
+RUN mkdir /www
 
-RUN echo '#!/bin/bash' > /start.sh && \
-    echo '# /usr/jexus/jws start' >> /start.sh && \
-    echo '/usr/sbin/sshd -D' >> /start.sh
+COPY start.sh /
 
 CMD ["/bin/bash", "/start.sh"]

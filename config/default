@@ -1,0 +1,33 @@
+######################
+# Web Site: Default
+########################################
+
+port=80
+root=/ /www
+hosts=*    #OR your.com,*.your.com
+
+
+# addr=0.0.0.0
+# CheckQuery=false
+NoLog=true
+# NoFile=/index.aspx
+# Keep_Alive=false
+# UseGZIP=false
+# UseHttps=true
+# DenyFrom=192.168.0.233, 192.168.1.*, 192.168.2.0/24
+# AllowFrom=192.168.*.*
+# DenyDirs=~/cgi, ~/upfiles
+# indexes=myindex.aspx
+# rewrite=^/.+?\.(asp|php|cgi|pl|sh)$ /index.aspx
+# reproxy=/bbs/ http://192.168.1.112/bbs/
+# host.Redirect=abc.com www.abc.com  301
+# ResponseHandler.Add=myKey:myValue
+
+
+# Jexus php fastcgi address is '/var/run/jexus/phpsvr'
+#######################################################
+# fastcgi.add=php|socket:/var/run/jexus/phpsvr
+
+# php-fpm listen address is '127.0.0.1:9000'
+############################################
+# fastcgi.add=php|tcp:127.0.0.1:9000
