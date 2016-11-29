@@ -6,7 +6,7 @@ RUN rpm --import "http://keyserver.ubuntu.com/pks/lookup?op=get&search=0x3FA7E03
 
 RUN yum -y install mono-complete
 
-ENV JEXUS_VERSION 5.8.1
+ENV JEXUS_VERSION 5.8.2
 
 RUN curl -O http://www.linuxdot.net/down/jexus-$JEXUS_VERSION.tar.gz && \
     tar -zxvf jexus-$JEXUS_VERSION.tar.gz && \
