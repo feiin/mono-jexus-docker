@@ -8,7 +8,7 @@ RUN yum -y install mono-complete
 
 ENV JEXUS_VERSION 5.8.2
 
-RUN curl -O http://www.linuxdot.net/down/jexus-$JEXUS_VERSION.tar.gz && \
+RUN curl -O -k http://www.linuxdot.net/down/jexus-$JEXUS_VERSION.tar.gz && \
     tar -zxvf jexus-$JEXUS_VERSION.tar.gz && \
     cd jexus-$JEXUS_VERSION && \
     ./install 
