@@ -24,7 +24,7 @@ RUN ssh-keygen -t rsa -f /etc/ssh/ssh_host_rsa_key -C '' -N '' && \
 RUN mkdir /www
 
 COPY start.sh /
-RUN echo "Asia/Shanghai" > /etc/timezone
-RUN dpkg-reconfigure -f noninteractive tzdata
+RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+RUN echo "Asia/Shanghai" >> /etc/timezone
 
 CMD ["/bin/bash", "/start.sh"]
